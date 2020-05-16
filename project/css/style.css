@@ -1,4 +1,6 @@
-header, main, footer {
+header,
+main,
+footer {
     max-width: 960px;
     margin: 0 auto;
 }
@@ -15,7 +17,7 @@ h2 {
 }
 
 header {
-    background-color: #628b48; 
+    background-color: #628b48;
     border-style: solid;
     border-width: 2px;
     border-color: darkgreen;
@@ -26,7 +28,7 @@ header {
 body {
     font-family: "roboto", "san serif";
     font-size: 14px;
-    background-color: #f3f9e3; 
+    background-color: #f3f9e3;
 }
 
 footer {
@@ -37,7 +39,9 @@ footer {
     border: 2px solid darkgreen;
 }
 
-div.logo {padding: 10px 20px;}
+div.logo {
+    padding: 10px 20px;
+}
 
 ul {
     list-style-type: none;
@@ -50,56 +54,65 @@ li {
 }
 
 h2.home-away {
-    background-color: #dd9787; /* or d65653 */
+    background-color: #dd9787;
+    /* or d65653 */
     width: 375px;
     text-align: center;
     margin-left: 75px;
 }
 
 h2.wedding {
-    background-color: #dd9787; /* or d65653 */
+    background-color: #dd9787;
+    /* or d65653 */
     width: 375px;
     text-align: center;
 }
+
 p.home-away {
     width: 375px;
     margin-left: 75px;
     padding: 10px 0px;
 }
+
 p.wedding {
     width: 375px;
 }
+
 h2.family-search {
-    background-color: #dd9787; /* or d65653 */
+    background-color: #dd9787;
+    /* or d65653 */
     text-align: center;
     margin: 0px 75px;
 }
+
 p.family-search {
     margin: 0px 75px;
-    padding-bottom: 10px;}
+    padding-bottom: 10px;
+}
 
 p.copyright {
     text-align: center;
 }
 
-a {color: #f3f9e3}
+a {
+    color: #f3f9e3
+}
 
 div.postal-address {
-    padding: 10px 0px 0px 10px; 
+    padding: 10px 0px 0px 10px;
     margin-left: 100px;
 }
 
-div.phone { 
-    padding: 0px 0px 0px 10px;  
+div.phone {
+    padding: 0px 0px 0px 10px;
     margin-left: 100px;
- }
+}
 
 div.email {
     padding: 0px 0px 0px 10px;
-    margin-left: 100px; 
+    margin-left: 100px;
 }
 
 div.social {
     padding: 0px 0px 0px 10px;
 }
-
