@@ -1,0 +1,105 @@
+header, main, footer {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+/* Color https://coolors.co/d36135-7fb069-ece4b7-e6aa68-02020b */
+
+h1 {
+    font-family: "Averia Serif Libre", "san serif";
+    font-size: 30px;
+}
+
+h2 {
+    font-size: 20px;
+}
+
+header {
+    background-color: #628b48; 
+    border-style: solid;
+    border-width: 2px;
+    border-color: darkgreen;
+    font-family: "roboto", "san serif";
+    font-size: 16px;
+}
+
+body {
+    font-family: "roboto", "san serif";
+    font-size: 14px;
+    background-color: #f3f9e3; 
+}
+
+footer {
+    font-family: "roboto", "san serif";
+    font-size: 16px;
+    color: #f3f9e3;
+    background-color: #628b48;
+    border: 2px solid darkgreen;
+}
+
+div.logo {padding: 10px 20px;}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 5px;
+}
+
+li {
+    display: inline;
+}
+
+h2.home-away {
+    background-color: #dd9787; /* or d65653 */
+    width: 375px;
+    text-align: center;
+    margin-left: 75px;
+}
+
+h2.wedding {
+    background-color: #dd9787; /* or d65653 */
+    width: 375px;
+    text-align: center;
+}
+p.home-away {
+    width: 375px;
+    margin-left: 75px;
+    padding: 10px 0px;
+}
+p.wedding {
+    width: 375px;
+}
+h2.family-search {
+    background-color: #dd9787; /* or d65653 */
+    text-align: center;
+    margin: 0px 75px;
+}
+p.family-search {
+    margin: 0px 75px;
+    padding-bottom: 10px;}
+
+p.copyright {
+    text-align: center;
+}
+
+a {color: #f3f9e3}
+
+div.postal-address {
+    padding: 10px 0px 0px 10px; 
+    margin-left: 100px;
+}
+
+div.phone { 
+    padding: 0px 0px 0px 10px;  
+    margin-left: 100px;
+ }
+
+div.email {
+    padding: 0px 0px 0px 10px;
+    margin-left: 100px; 
+}
+
+div.social {
+    padding: 0px 0px 0px 10px;
+}
+
