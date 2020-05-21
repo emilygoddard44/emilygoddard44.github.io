@@ -62,7 +62,8 @@ header nav ul li a { /* or assign class name */
 }
 
 .active { /* teacher used border-bottom: 1px solid #f3f9e3 ; padding-bottom: .2rem; but I like it better this way*/
-    color: blue;   
+    color: yellow;
+   
 }  
 
 
