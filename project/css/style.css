@@ -61,11 +61,11 @@ header nav ul li a { /* or assign class name */
     padding: .65rem; /* there is double padding btw words because each word has rt & lf padding*/
 }
 
-.active {     /* this is not inline; how to fix? */
-    color: blue;
-    border-bottom: 1px solid #f3f9e3 ;
-    padding-bottom: .2rem;
-}
+.active { /* teacher used border-bottom: 1px solid #f3f9e3 ; padding-bottom: .2rem; but I like it better this way*/
+    color: blue;   
+}  
+
+
 
 h2 {
     font-size: 1.2rem;
