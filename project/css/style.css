@@ -1,3 +1,15 @@
+/* Color https://coolors.co/d36135-7fb069-ece4b7-e6aa68-02020b */
+
+/* need to add block highlighter to nav */
+body {
+    background-color: #f3f9e3;
+    padding: 0;
+    margin: 0;
+    font-size: 16px; 
+    font-family: "roboto", "helvetica", "san serif";
+       
+}
+
 header,
 main,
 footer {
@@ -5,114 +17,155 @@ footer {
     margin: 0 auto;
 }
 
-/* Color https://coolors.co/d36135-7fb069-ece4b7-e6aa68-02020b */
+header {
+    background-color: #628b48;
+    color: black;
+    box-sizing: border-box;
+    border-style: solid;
+    border-width: .125rem;
+    border-color: darkgreen;
+    display: flex;  /* when display set to flex, it allows you to use the flex properties (align-items & justify-content) for children */
+    align-items: center; 
+    justify-content: space-around;
+}
+
+.logo {
+    width: 60px; /* size of image container, image can overflow & mess up horizontal alignment so set image width to % not px */
+    height: auto;
+} 
+
+.logo img {     
+    width: 100%; /* make image width to 100% (or less) of the parent .logo to keep within container */
+}
 
 h1 {
-    font-family: "Averia Serif Libre", "san serif";
-    font-size: 30px;
+    font-family: "Averia Serif Libre", cursive;
+    font-size: 2.5rem;
+}
+
+header nav ul {
+    display: flex; /* isn't this a repeat of header? */
+    align-items: center; /* isn't this a repeat of header? */
+    list-style: none; 
+}
+
+header nav ul li { 
+    flex: 1 1 auto;  /* what does this do? */
+}
+
+header nav ul li a { /* or assign class name */
+    color: #f3f9e3;
+    text-decoration: none;
+    font-size: 1.1rem;
+    display: block; /* if removed, then HOME comes in line, why? */
+    padding: .65rem; /* there is double padding btw words because each word has rt & lf padding*/
+}
+
+.active {     /* this is not inline; how to fix? */
+    color: blue;
+    border-bottom: 1px solid #f3f9e3 ;
+    padding-bottom: .2rem;
 }
 
 h2 {
-    font-size: 20px;
+    font-size: 1.2rem;
 }
 
-header {
-    background-color: #628b48;
-    border-style: solid;
-    border-width: 2px;
-    border-color: darkgreen;
-    font-family: "roboto", "san serif";
-    font-size: 16px;
-}
-
-body {
-    font-family: "roboto", "san serif";
-    font-size: 14px;
-    background-color: #f3f9e3;
-}
-
-footer {
-    font-family: "roboto", "san serif";
-    font-size: 16px;
-    color: #f3f9e3;
-    background-color: #628b48;
-    border: 2px solid darkgreen;
-}
-
-div.logo {
-    padding: 10px 20px;
-}
-
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 5px;
-}
-
-li {
-    display: inline;
-}
-
-h2.home-away {
-    background-color: #dd9787;
-    /* or d65653 */
+h2.home {
+    background-color: #dd9787;   /* or d65653 */
     width: 375px;
     text-align: center;
-    margin-left: 75px;
+    margin: 1em 0em 0em 5em;
+    padding: .3em 0em;
+    
 }
-
-h2.wedding {
-    background-color: #dd9787;
-    /* or d65653 */
-    width: 375px;
-    text-align: center;
-}
-
 p.home-away {
     width: 375px;
-    margin-left: 75px;
-    padding: 10px 0px;
+    margin: 0em 5em;
+    padding: 1.3em 0em;
 }
 
-p.wedding {
+main section img {
+    margin: 1em 0em 0em 5em;
+}
+h2.wedding {
+    background-color: #dd9787;    /* or d65653 */
     width: 375px;
+    text-align: center;
+    margin: 1em 0em 0em 5em;
+    padding: .3em 0em;
+}
+
+p.reception {
+    width: 375px;
+    margin: 0em 5em;
+    padding: 1.3em 0em;
 }
 
 h2.family-search {
-    background-color: #dd9787;
-    /* or d65653 */
+    background-color: #dd9787;    /* or d65653 */
     text-align: center;
-    margin: 0px 75px;
+    margin: 1em 5em 0em 5em;
+    padding: .3em 0em; /* this only changes this pink box */
 }
 
-p.family-search {
-    margin: 0px 75px;
-    padding-bottom: 10px;
+p.search {
+    margin: 0em 5em 0em 5em;
+    padding: 1.3em 0em;
 }
 
-p.copyright {
-    text-align: center;
+footer {
+    background-color: #628b48;
+    color: #f3f9e3;
+    margin-top: 1em;
+    box-sizing: border-box;
+    border: .125rem solid darkgreen;
+    display: grid; /*sections (the children) are now grid items */
+    grid-template-columns: 1fr 1fr; /* 1 fr = 1 column, so 2 of them make 2 columns of equal space */
+                                    /* 1fr 2fr = 1 column with 1/3 width and 2nd column 2/3 width */
+    grid-template-areas: "a b"
+    "c c";
+}
+
+.contact-info { 
+    grid-area: a;
+}
+
+.social-media {
+    grid-area: b;
+}
+
+.closing-line {
+    grid-area: c;
+}
+
+footer div ul {
+    display: flex;  /* when you set display to flex, you can then use properties such as flex-end */
+    justify-content: flex-end;
+}
+footer div ul li {
+    list-style: none;
 }
 
 a {
     color: #f3f9e3
 }
 
-div.postal-address {
-    padding: 10px 0px 0px 10px;
-    margin-left: 100px;
+.postal-address, .phone, .email {
+    padding: 2px 0px 0px 100px;
 }
 
-div.phone {
-    padding: 0px 0px 0px 10px;
-    margin-left: 100px;
+.social img {
+    width: 50px;
+    height: auto;
+    padding: 5px 15px 0px 0px;
 }
 
-div.email {
-    padding: 0px 0px 0px 10px;
-    margin-left: 100px;
+.instagram {
+    margin-right: 3.2em;
 }
 
-div.social {
-    padding: 0px 0px 0px 10px;
+p.copyright {
+    text-align: center;
+    padding-top: 1em;
 }
