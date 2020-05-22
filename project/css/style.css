@@ -61,6 +61,10 @@ header nav ul li a { /* or assign class name */
     padding: .65rem; /* there is double padding btw words because each word has rt & lf padding*/
 }
 
+header nav ul li a:hover {
+    background-color: blue;
+}
+
 .active { /* teacher used border-bottom: 1px solid #f3f9e3 ; padding-bottom: .2rem; but I like it better this way*/
     color: gold;
    
