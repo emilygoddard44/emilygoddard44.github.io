@@ -1,0 +1,258 @@
+body {
+  font-size: 16px;
+  background-color: #fff;
+  margin: 30px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+/* Activity 1 styles */
+.content1 {
+  width: 600px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;     /* align-items adjust the vertical alignment */
+  grid-gap: 20px;     /* padding doesn't work inside grid */
+}
+
+.red1 {
+  width: 100%;
+  height: 100px;
+  background-color: red;
+  grid-column: 1/3;
+}
+
+.green1 {
+  width: 200px;
+  height: 200px;
+  background-color: green;
+}     /* cannot apply align-items or justify-items here because they are not in flex/grid themselves. they will only obey the parent */
+
+.gold1 {
+  width: 200px;
+  height: 200px;
+  background-color: gold;
+}
+
+.blue1 {
+  width: 100%;
+  height: 100px;
+  background-color: blue;
+  grid-column: 1/3;
+}
+
+/* Activity 2 Styles */
+
+/* Layout 2 */
+
+.content2,
+.content3,
+.content4,
+.content5,
+.content6,
+.content7 {
+  width: 600px;
+  /* this is setting the width of the container, not the items */
+}
+
+.content2 {
+  position: relative;
+  /* use "position: relative" because this places it in the document according to its normal flow, meaning it will follow content1 */
+  /* if you use "position:absolute" then is yanks it out of normal flow and gets stuck exactly where you tell it */
+  height: 300px;
+}
+
+.red2, .green2, .gold2, .blue2 {
+  height: 100px;
+  width: 100px;
+}
+
+.red2 {
+  position: relative;
+  /* why do both parent and child need relative positioning? */
+  top: 5px;
+  left: 5px;
+  background-color: red;
+}
+
+.green2 {
+  position: relative;
+  top: -50px;
+  right: -50px;
+  background-color: green;
+}
+
+.gold2 {
+  position: relative;
+  top: -100px;
+  right: -100px;
+  background-color: gold;
+}
+
+.blue2 {
+  position: relative;
+  top: -150px;
+  right: -150px;
+  background-color: blue;
+}
+
+/* Layout 3 */
+
+.content3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.red3 {
+  width: 100%;
+  height: 100px;
+  background-color: red;
+  grid-column: 1/3;
+}
+
+.green3 {
+  width: 90%;
+  height: 200px;
+  background-color: green;
+  justify-self: left;
+}
+.gold3 {
+  width: 90%;
+  height: 200px;
+  background-color: gold;
+  justify-self: right;
+} 
+.blue3 {
+  width: 100%;
+  height: 100px;
+  background-color: blue;
+  grid-column: 1/3;
+}
+
+/* Layout 4 */
+
+.content4 { 
+  display: grid;
+  height: 300px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas: 
+    "a b"
+    "a c"
+    "a d";
+}
+
+.red4 {
+  grid-area: a;
+  background-color: red;
+}
+
+.green4 {
+  grid-area: b;
+  background-color: green;
+}
+
+.gold4 {
+  grid-area: c;
+  background-color: gold;
+}
+
+.blue4 {
+  grid-area: d;
+  background-color: blue;
+}
+
+/* Layout 5 */
+
+.red5 {
+  width: 100%;
+  height: 100px;
+  background-color: red;
+}
+
+.green5 {
+  float:left;
+  margin: 0px 20px 15px 0px;
+  width: 200px;
+  height: 200px;
+  background-color: green;
+}
+
+.gold5 {
+  width: 100%;
+  height: auto;
+  box-sizing: border-box;
+  background-color: gold; 
+  padding: 20px;
+}
+
+.blue5 {
+  width: 100%;
+  height: 100px;
+  background-color: blue;
+}
+
+/* Layout 6: overlapping items by rearranging HTML order so those on top are lower down the source */
+
+.content6{
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  height: 600px;
+}
+
+.red6 {                       /* shorthand: grid-area: 1 / 1 / 3 / 5; */
+  grid-row-start: 1;          /* grid-row-start is the 1st value */
+  grid-row-end: 3;            /* grid-row-end is the 3rd value */
+  grid-column-start: 1;       /* grid-column-start is the 2nd value */
+  grid-column-end: 5;         /* grid-column-end is the 4th value */
+  background-color: red;   
+}
+
+.blue6 {                      /* these items must be arranged in HTML in the proper layout order (what's on top should be listed last) or use z-index to control */
+  grid-area: 2 / 2 / 6 / 6;
+  background-color: blue;
+}
+
+.gold6 {
+  grid-area: 3 / 5 / 7 / 7;
+  background-color: gold;
+}
+
+.green6 {
+  grid-area: 5 / 1 / 7 / 3;
+  background-color: green;
+}
+
+/* Layout 6: using v-index to overlap items */
+
+.content7{
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  height: 600px;
+}
+
+.red7 { 
+  grid-row-start: 1;          /* grid-row-start is the 1st value */
+  grid-row-end: 3;            /* grid-row-end is the 3rd value */
+  grid-column-start: 1;       /* grid-column-start is the 2nd value */
+  grid-column-end: 5;         /* grid-column-end is the 4th value */   
+  background-color: red;
+  z-index: 1;   
+}
+.green7 {
+  grid-area: 5 / 1 / 7 / 3;
+  background-color: green;
+  z-index: 4;
+}
+.gold7 { 
+  grid-area: 3 / 5 / 7 / 7; 
+  background-color: gold;
+  z-index: 3;
+}
+
+.blue7 {
+  grid-area: 2 / 2 / 6 / 6;
+  background-color: blue;
+  z-index: 2;
+}

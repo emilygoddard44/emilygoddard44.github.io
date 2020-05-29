@@ -2,14 +2,15 @@
 
 /* need to add block highlighter to nav */
 body {
-    background-color: #f3f9e3;
+    background-color: grey; /* for browsers that do not support gradient */
+    background-image: linear-gradient(grey, lightgrey);
     padding: 0;
     margin: 0;
     font-size: 16px; 
     font-family: "roboto", "helvetica", "san serif";
        
 }
-
+h1 {font-family: a;}
 header,
 main,
 footer {
@@ -70,7 +71,9 @@ header nav ul li a:hover {
    
 }  
 
-
+main {
+    background-color: #f3f9e3;
+}
 
 h2 {
     font-size: 1.2rem;
